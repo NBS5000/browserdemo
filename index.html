@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Browser Difference Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+
+    input {
+      field-sizing: content;
+      font-size: 24px;
+      padding: 8px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f3f3f3;
+    }
+
+    .scroll-box {
+      width: 300px;
+      height: 160px;
+      overflow-y: scroll;
+      padding: 16px;
+      border: 2px solid #333;
+      background: white;
+
+      /* Firefox + newer Chrome */
+      scrollbar-color: red yellow;
+      scrollbar-width: thin;
+    }
+
+    /* Chrome / Safari WebKit-style scrollbar rules */
+    .scroll-box::-webkit-scrollbar {
+      width: 18px;
+    }
+
+    .scroll-box::-webkit-scrollbar-track {
+      background: yellow;
+    }
+
+    .scroll-box::-webkit-scrollbar-thumb {
+      background: red;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>This is a simple demonstration of the differences in cross-browser compatability.</h1>
+  <div class="scroll-box">
+    <p>This is a scrollable box.</p>
+    <p>Scroll up and down and have a look at the scroll bar to the right.</p>
+    <p>It's not overly fascinating in itself.</p>
+    <p>Now, open this link up on a different browser.</p>
+    <p>If you're in Chrome, have a look in Firefox, Safari, Edge.</p>
+    <p>See if you can spot any differences.</p>
+  </div>
+  <br/><br/>
+  <p>Here's another example, look at this input field. Compare it to aother browser and see if you can spot the difference.</p>
+  <label>
+    You can enter your name if you like, nothing happens here.
+    <input value="Hello there">
+  </label>
+</body>
+</html>
